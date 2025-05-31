@@ -1,0 +1,30 @@
+[
+    {
+         "nama": "Naura", 
+         "umur": 21,
+         "nrp": "2217020073",
+         "lulus": true,
+         "hobby": [
+             "coding",
+             "gaming"
+        ],
+         "pembimbing": {
+         "pembimbing1": "Nisa Sintia",
+         "pembimbing2": "Meliani Saputri"
+        }
+    },
+    {
+         "nama": "Naura", 
+         "umur": 21,
+         "nrp": "2217020073",
+         "lulus": true,
+         "hobby": [
+             "coding",
+             "gaming"
+        ],
+         "pembimbing": {
+         "pembimbing1": "Nisa Sintia",
+         "pembimbing2": "Meliani Saputri"
+        }
+    }
+]
