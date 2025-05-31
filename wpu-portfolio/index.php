@@ -100,10 +100,10 @@ if (isset($media['data']) && count($media['data']) >= 1) {
         </div>
         <div class="row justify-content-center">
           <div class="col-md-5">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, molestiae sunt doloribus error ullam expedita cumque blanditiis quas vero, qui, consectetur modi possimus. Consequuntur optio ad quae possimus, debitis earum.</p>
+            <p>Sebagai mahasiswa, aku meyakini bahwa proses belajar tidak berhenti di ruang kelas. Setiap hari adalah kesempatan untuk memahami hal-hal baru, mencoba, dan tumbuh. Aku suka menjelajahi dunia teknologi, mengeksplorasi berbagai ide, dan menantang diriku untuk terus berkembang. Bagiku, perjalanan ini bukan sekadar mencari nilai akademik, tetapi juga membentuk karakter, cara berpikir, dan semangat untuk tidak cepat puas dengan apa yang sudah dicapai.</p>
           </div>
           <div class="col-md-5">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, molestiae sunt doloribus error ullam expedita cumque blanditiis quas vero, qui, consectetur modi possimus. Consequuntur optio ad quae possimus, debitis earum.</p>
+            <p>Di sisi lain, aku melihat pentingnya memiliki keterampilan yang relevan di era digital saat ini. Oleh karena itu, aku terus mengasah kemampuan di bidang yang aku minati—terutama teknologi, pemrograman, dan konten kreatif. Aku percaya bahwa dengan terus belajar dan beradaptasi, kita bisa menciptakan dampak yang nyata. Tujuanku sederhana: menjadi pribadi yang tidak hanya berkembang untuk diri sendiri, tetapi juga bisa memberi kontribusi positif bagi lingkungan sekitar.</p>
           </div>
         </div>
       </div>

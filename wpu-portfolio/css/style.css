@@ -31,3 +31,7 @@ footer {
     height: 300px;
     object-fit: cover;
 }
+
+#about p {
+    text-align: justify;
+}
