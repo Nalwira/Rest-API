@@ -51,3 +51,4 @@ $('#search-input').on('keyup', function (e) {
         searchMovie();
     }
 })
+
