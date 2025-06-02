@@ -2,7 +2,7 @@
 <html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
-  <title>Index of /rest-api/json</title>
+  <title>Index of /rest-api/wpu-hut</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -15,7 +15,7 @@
 <body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-sans">
   <div class="max-w-5xl mx-auto py-10 px-4">
     <div class="flex justify-between items-center mb-6">
-      <h1 class="text-3xl font-bold">Index of /rest-api/json</h1>
+      <h1 class="text-3xl font-bold">Index of /rest-api/wpu-hut</h1>
       <button id="toggleDark" class="text-sm px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded hover:bg-gray-300 dark:hover:bg-gray-600">
         🌙 Toggle Dark Mode
       </button>
@@ -48,7 +48,7 @@
               $icon = $isDir ? "📁" : "📄";
               $lastMod = date("Y-m-d H:i", filemtime($path));
               $size = $isDir ? '-' : (round(filesize($path) / 1024, 1) . ' KB');
-              echo "<tr class='border-b border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800'>
+              echo "<tr class='border-b border-gray-200 dark:border-gray-700'>
                       <td class='py-2 px-3'>
                         <a href='$file' class='text-blue-600 dark:text-blue-400 hover:underline'>$icon $file" . ($isDir ? '/' : '') . "</a>
                       </td>
@@ -76,8 +76,7 @@
     document.getElementById('searchInput').addEventListener('keyup', function () {
       const filter = this.value.toLowerCase();
       const rows = document.querySelectorAll('#fileTable tr');
-      rows.forEach((row, index) => {
-        if (index === 0) return; // skip parent directory
+      rows.forEach(row => {
         const text = row.textContent.toLowerCase();
         row.style.display = text.includes(filter) ? '' : 'none';
       });
