@@ -302,13 +302,244 @@ if (isset($media['data']) && count($media['data']) >= 1) {
 
 
 
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Naura Zavia Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <style>
+      /* --- CSS untuk header unik dan menarik --- */
 
+      body {
+        padding-top: 70px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+      }
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-    <script src="https://apis.google.com/js/platform.js"></script>
+      /* Navbar with subtle shadow and smooth background transition */
+      nav.navbar {
+        background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        transition: background-color 0.3s ease;
+      }
+      nav.navbar:hover {
+        background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+      }
+      nav.navbar .navbar-brand {
+        font-weight: 700;
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+        color: #fff !important;
+        text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+      }
+      nav.navbar .nav-link {
+        color: #e0e0e0 !important;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+      nav.navbar .nav-link:hover {
+        color: #fff !important;
+        text-shadow: 0 0 5px #fff;
+      }
+
+      /* Jumbotron with animated gradient background */
+      .jumbotron {
+        position: relative;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23d5ab, #23a6d5);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+        color: white;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        margin-bottom: 0;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      @keyframes gradientBG {
+        0% {background-position: 0% 50%;}
+        50% {background-position: 100% 50%;}
+        100% {background-position: 0% 50%;}
+      }
+
+      /* Profile image with glowing effect */
+      .jumbotron img {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border: 5px solid rgba(255,255,255,0.7);
+        box-shadow: 0 0 20px rgba(255,255,255,0.9);
+        transition: box-shadow 0.3s ease;
+      }
+      .jumbotron img:hover {
+        box-shadow: 0 0 40px #fff, 0 0 60px #23d5ab, 0 0 80px #23a6d5;
+      }
+
+      /* Animated typing effect for subtitle */
+      .typed-text {
+        font-size: 1.5rem;
+        font-weight: 600;
+        font-family: 'Courier New', Courier, monospace;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 0.15em solid white;
+        animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+        margin-top: 1rem;
+      }
+
+      @keyframes typing {
+        from {width: 0;}
+        to {width: 100%;}
+      }
+
+      @keyframes blink-caret {
+        0%, 100% {border-color: transparent;}
+        50% {border-color: white;}
+      }
+
+      /* --- About Section --- */
+      #about {
+        max-width: 1000px;
+        margin: 70px auto 90px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        opacity: 0;
+        transform: translateY(40px);
+        animation: fadeInUp 1s ease forwards;
+        animation-delay: 0.5s;
+      }
+
+      #about h2 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #2575fc;
+        margin-bottom: 15px;
+        letter-spacing: 1.5px;
+        text-align: center;
+      }
+
+      #about p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #444;
+        text-align: justify;
+        padding: 0 15px;
+      }
+
+      /* --- Portfolio Section --- */
+      #portfolio {
+        max-width: 1500px;
+        margin: 0 auto 70px auto;
+      }
+
+      #portfolio h2 {
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: #2575fc;
+        margin-bottom: 40px;
+        text-align: center;
+        letter-spacing: 1.7px;
+      }
+
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+        gap: 30px;
+      }
+
+      .portfolio-item {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        overflow: hidden;
+        cursor: pointer;
+        transform: translateY(30px);
+        opacity: 0;
+        animation: fadeInUp 0.7s ease forwards;
+      }
+
+      .portfolio-item:hover {
+        transform: translateY(0) scale(1.05);
+        box-shadow: 0 15px 40px rgba(37,117,252,0.4);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .portfolio-item img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .portfolio-item .content {
+        padding: 20px;
+      }
+
+      .portfolio-item .title {
+        font-weight: 700;
+        font-size: 1.3rem;
+        color: #2575fc;
+        margin-bottom: 8px;
+      }
+
+      .portfolio-item .description {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.4;
+      }
+
+      .portfolio-item:nth-child(1) {
+        animation-delay: 0.3s;
+      }
+      .portfolio-item:nth-child(2) {
+        animation-delay: 0.6s;
+      }
+      .portfolio-item:nth-child(3) {
+        animation-delay: 0.9s;
+      }
+      .portfolio-item:nth-child(4) {
+        animation-delay: 1.2s;
+      }
+      .portfolio-item:nth-child(5) {
+        animation-delay: 1.5s;
+      }
+      .portfolio-item:nth-child(6) {
+        animation-delay: 1.8s;
+      }
+
+      /* Keyframes */
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#home">Naura Zavia</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" 
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
